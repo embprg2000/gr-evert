@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<block>
+  <name>prbs_b</name>
+  <key>evert_prbs_b</key>
+  <category>evert</category>
+  <import>import evert</import>
+  <make>evert.prbs_b($prbs_type)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>PRBS type</name>
+    <key>prbs_type</key>
+    <type>int</type>
+    <option>
+      <name>PRBS7</name>
+      <key>0</key>
+    </option>
+    <option>
+      <name>PRBS15</name>
+      <key>1</key>
+    </option> 
+    <option>
+      <name>PRBS23</name>
+      <key>2</key>
+    </option>
+    <option>
+      <name>PRBS31</name>
+      <key>3</key>
+    </option>             
+  </param>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+</block>
