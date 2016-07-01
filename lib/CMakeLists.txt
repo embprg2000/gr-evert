@@ -24,10 +24,9 @@ include(GrPlatform) #define LIB_SUFFIX
 
 include_directories(${Boost_INCLUDE_DIR})
 link_directories(${Boost_LIBRARY_DIRS})
-
 list(APPEND evert_sources
     prbs_b_impl.cc
-)
+    compare_ffb_impl.cc )
 
 set(evert_sources "${evert_sources}" PARENT_SCOPE)
 if(NOT evert_sources)

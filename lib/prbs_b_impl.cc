@@ -65,41 +65,41 @@ namespace gr {
          m_type = 0;
       switch (m_type)
       {
-			case 0:  // PRBS7
-				for (int i=0; i<noutput_items; ++i)
-				{
-					*out = (((m_a >> 6) ^ (m_a >> 5)) & 1);
-					m_a = ((m_a << 1) | *out) & 0x7fffffff;
-					++out;
-				}
-				break;
-				
-			case 1:  // PRBS15
-				for (int i=0; i<noutput_items; ++i)
-				{
-					*out = (((m_a >> 14) ^ (m_a >> 15)) & 1);
-					m_a = ((m_a << 1) | *out) & 0x7fffffff;
-					++out;
-				}
-				break;
+            case 0:  // PRBS7
+                for (int i=0; i<noutput_items; ++i)
+                {
+                    *out = (((m_a >> 6) ^ (m_a >> 5)) & 1);
+                    m_a = ((m_a << 1) | *out) & 0x7fffffff;
+                    ++out;
+                }
+                break;
+                
+            case 1:  // PRBS15
+                for (int i=0; i<noutput_items; ++i)
+                {
+                    *out = (((m_a >> 14) ^ (m_a >> 15)) & 1);
+                    m_a = ((m_a << 1) | *out) & 0x7fffffff;
+                    ++out;
+                }
+                break;
 
-			case 2:  // PRBS23
-				for (int i=0; i<noutput_items; ++i)
-				{
-					*out = (((m_a >> 22) ^ (m_a >> 17)) & 1);
-					m_a = ((m_a << 1) | *out) & 0x7fffffff;
-					++out;
-				}
-				break;
+            case 2:  // PRBS23
+                for (int i=0; i<noutput_items; ++i)
+                {
+                    *out = (((m_a >> 22) ^ (m_a >> 17)) & 1);
+                    m_a = ((m_a << 1) | *out) & 0x7fffffff;
+                    ++out;
+                }
+                break;
 
-			case 3:  // PRBS31
-				for (int i=0; i<noutput_items; ++i)
-				{
-					*out = (((m_a >> 30) ^ (m_a >> 27)) & 1);
-					m_a = ((m_a << 1) | *out) & 0x7fffffff;
-					++out;
-				}
-				break;
+            case 3:  // PRBS31
+                for (int i=0; i<noutput_items; ++i)
+                {
+                    *out = (((m_a >> 30) ^ (m_a >> 27)) & 1);
+                    m_a = ((m_a << 1) | *out) & 0x7fffffff;
+                    ++out;
+                }
+                break;
       }
 
       // Tell runtime system how many output items we produced.

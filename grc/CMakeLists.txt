@@ -16,7 +16,7 @@
 # along with GNU Radio; see the file COPYING.  If not, write to
 # the Free Software Foundation, Inc., 51 Franklin Street,
 # Boston, MA 02110-1301, USA.
-
 install(FILES
-    evert_prbs_b.xml DESTINATION share/gnuradio/grc/blocks
+    evert_prbs_b.xml
+    evert_compare_ffb.xml DESTINATION share/gnuradio/grc/blocks
 )

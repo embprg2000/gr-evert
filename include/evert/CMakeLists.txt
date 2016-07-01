@@ -22,5 +22,6 @@
 ########################################################################
 install(FILES
     api.h
-    prbs_b.h DESTINATION include/evert
+    prbs_b.h
+    compare_ffb.h DESTINATION include/evert
 )

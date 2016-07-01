@@ -23,7 +23,7 @@ from gnuradio import gr, gr_unittest
 from gnuradio import blocks
 import evert_swig as evert
 
-class qa_prbs_b (gr_unittest.TestCase):
+class qa_compare_ffb (gr_unittest.TestCase):
 
     def setUp (self):
         self.tb = gr.top_block ()
@@ -33,13 +33,9 @@ class qa_prbs_b (gr_unittest.TestCase):
 
     def test_001_t (self):
         # set up fg
-        prbs = evert.prbs_b()
-        dst  = blocks.vector_sink_b()
-        self.tb.connect (prbs, dst)
         self.tb.run ()
-        result_data = dst.data ()
         # check data
 
 
 if __name__ == '__main__':
-    gr_unittest.run(qa_prbs_b, "qa_prbs_b.xml")
+    gr_unittest.run(qa_compare_ffb, "qa_compare_ffb.xml")
